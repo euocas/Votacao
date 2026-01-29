@@ -1,0 +1,13 @@
+file_put_contents(...): Esta função grava uma string em um arquivo. Ela é equivalente a chamar fopen(), fwrite() e fclose() sequencialmente.
+
+$dadosCandidatos: O caminho do arquivo onde os dados serão salvos.
+
+$linha: O conteúdo (string) a ser gravado.
+
+FILE_APPEND: Flag que diz ao PHP para adicionar o conteúdo ao final do arquivo, em vez de sobrescrever o conteúdo existente.
+
+LOCK_EX: Flag que adquire um bloqueio exclusivo no arquivo enquanto escreve. Isso impede que outros processos ou usuários escrevam 
+no mesmo arquivo ao mesmo tempo, evitando corrupção de dados.
+
+| (Operador OR): Combina as duas flags (FILE_APPEND e LOCK_EX).
+if (...): A função retorna o número de bytes gravados em caso de sucesso, ou false se houver falha (como permissão negada ou diretório inexistente). O if verifica se o retorno é verdadeiro (número de bytes > 0). 
